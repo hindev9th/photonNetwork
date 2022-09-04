@@ -1,0 +1,9 @@
+.git
+.vscode
+.vs
+Library/
+Logs/
+obj/
+Packages/
+ProjectSettings/
+.gitignore
