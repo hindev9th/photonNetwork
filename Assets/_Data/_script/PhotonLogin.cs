@@ -18,11 +18,16 @@ public class PhotonLogin : MonoBehaviourPunCallbacks
             gameObject.SetActive(false);
         }
     }
+    public virtual void showRooms(){
+        PhotonNetwork.JoinLobby();
+    }
 
     public override void OnConnectedToMaster()
     {
-        Debug.Log("PUN Basics Tutorial/Launcher: OnConnectedToMaster() was called by PUN");
-        PhotonNetwork.JoinLobby();
+        if (!PhotonNetwork.InLobby)
+        {
+            PhotonNetwork.JoinLobby();
+        }
     }
 
     public override void OnJoinedLobby()

@@ -49,7 +49,7 @@ public class ListRooms : MonoBehaviourPunCallbacks
         return null;
     }
 
-    protected virtual void UpdateRoomProfileUI(){
+    public virtual void UpdateRoomProfileUI(){
         foreach(Transform chlid in this.roomContent){
             Destroy(chlid.gameObject);
         }
